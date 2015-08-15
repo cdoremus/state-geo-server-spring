@@ -4,3 +4,7 @@
 /gradle/
 *.log
 /.settings/
+#Ignores for files that are copied over from AngularJS client project
+/src/main/webapp/static/*.json
+/src/main/webapp/static/index.html
+/src/main/webapp/static/bundle.js*
