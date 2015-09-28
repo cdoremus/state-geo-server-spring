@@ -5,7 +5,7 @@ import java.io.Serializable;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document(collection="adjacent_states")
+@Document(collection="states")
 public class AdjacentState implements Serializable {
 
 	private static final long serialVersionUID = 1L;
@@ -13,6 +13,8 @@ public class AdjacentState implements Serializable {
 	@Id
 	private String id;
 	private String name;
+	private String code;
+	private String capital;
 	private String[] adjacent;
 	
 	public AdjacentState(){
@@ -40,6 +42,22 @@ public class AdjacentState implements Serializable {
 
 	public void setAdjacent(String[] adjacent) {
 		this.adjacent = adjacent;
+	}
+
+	public String getCode() {
+		return code;
+	}
+
+	public void setCode(String code) {
+		this.code = code;
+	}
+
+	public String getCapital() {
+		return capital;
+	}
+
+	public void setCapital(String capital) {
+		this.capital = capital;
 	}
 	
 }

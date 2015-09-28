@@ -5,7 +5,7 @@ import java.io.Serializable;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document(collection="adjacent_states")
+@Document(collection="states")
 public class State implements Serializable {
 
 	private static final long serialVersionUID = 1L;
@@ -13,6 +13,8 @@ public class State implements Serializable {
 	@Id
 	private String id;
 	private String name;
+	private String code;
+	private String capital;
 	
 	public State() {
 	}
@@ -31,5 +33,21 @@ public class State implements Serializable {
 
 	public void setName(String name) {
 		this.name = name;
+	}
+
+	public String getCode() {
+		return code;
+	}
+
+	public void setCode(String code) {
+		this.code = code;
+	}
+
+	public String getCapital() {
+		return capital;
+	}
+
+	public void setCapital(String capital) {
+		this.capital = capital;
 	}
 }
