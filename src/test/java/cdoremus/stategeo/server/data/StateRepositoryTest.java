@@ -53,7 +53,7 @@ public class StateRepositoryTest {
 		assertEquals(50, stateList.size());
 		//assure that Alabama is the first state
 		assertEquals("Alabama".toLowerCase(), stateList.get(0).getName().toLowerCase());
-		//assure that Wyoming is the first state
+		//assure that Wyoming is the last state
 		assertEquals("Wyoming".toLowerCase(), stateList.get(49).getName().toLowerCase());
 	}
 
