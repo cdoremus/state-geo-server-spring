@@ -7,11 +7,11 @@ public class ErrorJson implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 	
-	public Integer status;
-	public String error;
-	public String message;
-	public String timeStamp;
-	public String trace;
+	public final Integer status;
+	public final String error;
+	public final String message;
+	public final String timeStamp;
+	public final String trace;
 	
 	public ErrorJson(int status, Map<String, Object> errorAttributes) {
 	    this.status = status;
