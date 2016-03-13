@@ -1,6 +1,5 @@
 package cdoremus.stategeo.server;
 
-import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -15,12 +14,12 @@ import com.mongodb.Mongo;
 
 
 @Configuration
-//@EnableWebMvc
+@EnableWebMvc
 @EnableMongoRepositories
 @EnableAutoConfiguration
 @ComponentScan
 @PropertySource("classpath:dev.properties")
-class ApplicationConfig extends AbstractMongoConfiguration {
+public class ApplicationConfig extends AbstractMongoConfiguration {
 
 	
 	@Override
@@ -39,7 +38,7 @@ class ApplicationConfig extends AbstractMongoConfiguration {
 		return new PropertySourcesPlaceholderConfigurer();
 	}
 	
-	public static void main(String[] args){
-		SpringApplication.run(ApplicationConfig.class, args);
-	}
+//	public static void main(String[] args){
+//		SpringApplication.run(ApplicationConfig.class, args);
+//	}
 }
