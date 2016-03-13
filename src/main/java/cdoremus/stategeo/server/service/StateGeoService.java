@@ -40,7 +40,7 @@ public class StateGeoService {
 	@RequestMapping(value=ADJACENT_STATES_PATH, method=RequestMethod.GET)
 	public List<AdjacentState> findAdjacentStates() {
 		
-		List<AdjacentState> states = adjacentStateRepository.findAllByOrderByName();		
+		List<AdjacentState> states = adjacentStateRepository.findAllByOrderByNameAsc();		
 		
 		return states;
 	}
