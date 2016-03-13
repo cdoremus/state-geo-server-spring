@@ -50,7 +50,7 @@ public class AdjacentStateRepositoryTest {
 
 	@Test
 	public void testFindAllByOrderByName() {
-		List<AdjacentState> stateList= repository.findAllByOrderByName();
+		List<AdjacentState> stateList= repository.findAllByOrderByNameAsc();
 		
 		assertEquals(50, stateList.size());
 		//assure that Alabama is the first state
